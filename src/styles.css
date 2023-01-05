@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;700&family=Reenie+Beanie&display=swap");
+
+.BookRatingApp {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.DApp {
+  font-family: "Nunito", sans-serif;
+  text-align: center;
+  color: indigo;
+}
+
+.BookItem {
+  border: 3px solid indigo;
+  background: white;
+  cursor: pointer;
+  border-radius: 10px;
+  height: auto;
+  width: 600px;
+  padding: 10px;
+  color: indigo;
+  box-shadow: 2px 4px;
+  margin: 10px;
+  transition: 0.5s;
+}
+.BookItem:hover {
+  background: floralwhite;
+}
+.BookItem[data-selected="true"] {
+  background: #ffeb3b;
+}
+
+.BookHeaderContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px;
+  vertical-align: center;
+}
+
+.BookItemDetail {
+  font-variant: all-petite-caps;
+  font-size: 18px;
+}
+
+.BookReviewers {
+  display: none;
+  justify-content: space-between;
+  text-align: center;
+  font-variant: all-small-caps;
+  letter-spacing: 1px;
+}
+
+.BookReviewers[data-selected="true"] {
+  display: flex;
+}
+
+.BookRatingPanel {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.StarsView {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.starImage {
+  height: 40px;
+}
+
+.rating-button {
+  background-color: indigo; /* Green */
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.5s;
+  box-shadow: 2px 4px #888888;
+  margin: 20px;
+}
+
+.rating-button[data-loading="true"] {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.rating-button:hover {
+  background-color: #3b0066;
+  box-shadow: 1px 2px #888888;
+}
+
+/* The slider itself */
+.ratings-slider {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 200px; /* Full-width */
+  height: 25px; /* Specified height */
+  background: lightpink; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+}
+
+/* Mouse-over effects */
+.ratings-slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.ratings-slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: indigo; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.ratings-slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: indigo; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
